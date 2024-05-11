@@ -88,8 +88,6 @@ namespace utils_parallel {
     double** L; // lower triangular matrix
     double** U; // upper triangular matrix
 
-    double Ajj;
-
 
     void abort_with_error_message(const string& msg) {
         cerr << msg << endl;
@@ -138,14 +136,10 @@ namespace utils_parallel {
 
     void lu_decomposition_parallel() {
         for (int j = 0; j < N; ++j) {
-            Ajj = 1 / U[j][j];
-            #pragma omp parallel for schedule(static)
+            double Ajj = 1 / U[j][j];
+            #pragma omp parallel for
             for (int i = j + 1; i < N; ++i){
                 L[i][j] = U[i][j] * Ajj;
-            }
-
-            #pragma omp parallel for schedule(static)
-            for (int i = j + 1; i < N; ++i) {
                 for (int k = j; k < N; ++k) {
                     U[i][k] -= L[i][j] * U[j][k];
                 }

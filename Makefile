@@ -1,7 +1,7 @@
 CC = g++ -std=c++11
 OBJ = *.o
 EXE = main
-FLAGS = -O3 -fopenmp -Wall -Wextra -pedantic -Wno-unused-result
+FLAGS = -O3 -fopenmp -Wall -Wextra -pedantic -Wno-unused-result -march=native
 
 all:${EXE}
 
