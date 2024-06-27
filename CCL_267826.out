@@ -1,0 +1,17 @@
+Serial Begin
+Serial Average Time: 0.389483s
+Serial Average Time: 0.899589s
+Serial Average Time: 5.69435s
+Serial Average Time: 10.0332s
+Serial Done
+Parallel Begin
+CUDA_CCL Average Time: 0.00304414s
+CUDA_CCL Average Time: 0.00582716s
+CUDA_CCL Average Time: 0.0338207s
+CUDA_CCL Average Time: 0.0592526s
+Parallel Done
+Check Results Correctness
+Correct (./output/labels_1_serial.txt refers to ./output/labels_1_cuda.txt).
+Correct (./output/labels_2_serial.txt refers to ./output/labels_2_cuda.txt).
+Correct (./output/labels_3_serial.txt refers to ./output/labels_3_cuda.txt).
+Correct (./output/labels_4_serial.txt refers to ./output/labels_4_cuda.txt).

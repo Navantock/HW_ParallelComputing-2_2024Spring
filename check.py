@@ -42,7 +42,7 @@ if __name__ == "__main__":
     label_arr_ref = get_min_label_arr(ref_output_filename)
 
     if np.allclose(label_arr, label_arr_ref):
-        print("Correct ({} refers ro {}).".format(output_filename, ref_output_filename))
+        print("Correct ({} refers to {}).".format(output_filename, ref_output_filename))
     else:
-        print("Incorrect ({} refers ro {}).".format(output_filename, ref_output_filename))
+        print("Incorrect ({} refers to {}).".format(output_filename, ref_output_filename))
 
